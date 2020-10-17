@@ -60,6 +60,4 @@ app.post('/compose', (req, res) => {
 app.listen(5000, function() {
   console.log("Server started on port 5000");
   post.addPost("majd is the title", "hasan")
-  console.log(post.getSize());
-  console.log(post.getPost(0).title);
 });
