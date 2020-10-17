@@ -1,0 +1,19 @@
+<%- include('partials/header'); -%>
+
+<div class="container-fluid">
+  <h1>Home page</h1>
+  <p><%= content%></p>
+
+  <%   if (postsSize > 0 ) {%>
+  <br>
+  <h2>Blogs</h2>
+  <%   }%>
+  <% posts.forEach((post,i) =>{ %>
+  <h3><%=  post.title %></h3>
+  <p><%= post.shortText %> <a href="/blog?id=<%=i%>"> Read more...</a></p>
+  <%   }) %>
+</div>
+
+<a href="/compose"><button class="btn btn-lg btn-dark" type="button" name="button">Compose a Blog</button></a>
+
+<%- include('partials/footer'); -%>
